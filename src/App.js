@@ -1,23 +1,25 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
 
+import "./css/estilo.css";
 function App() {
+  const icon = "📌";
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="container">
+      <div className="row">
+        <div className="col ">
+          <div className="card mt-5">
+            <div className="card-body">
+              <h1 className="card-title text-center">{icon}Task App</h1>
+            </div>
+            <ul className="list-group list-group-flush">
+              <li className="list-group-item">{icon}Sacar la basura</li>
+              <li className="list-group-item">{icon}Pasear al Perro</li>
+              <li className="list-group-item">{icon}Acostarse temprano</li>
+            </ul>
+          </div>
+        </div>
+      </div>
     </div>
   );
 }
