@@ -12,7 +12,9 @@ function App() {
   const [tarea, setTarea] = useState({
     item: "",
     done: false,
+    inicio: "",
   });
+
   const [tasks, setTasks] = useState([]);
 
   const [count, setCount] = useState(0);
@@ -33,6 +35,7 @@ function App() {
     setTarea({
       item: e.target.value,
       done: false,
+      inicio: moment().format("L"),
     });
   };
   const handleEnter = (e) => {

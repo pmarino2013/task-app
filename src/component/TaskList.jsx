@@ -1,13 +1,16 @@
 import React from "react";
+import moment from "moment";
 
 export default function TaskList({ icon, tasks, setTasks }) {
   const iconX = "✔";
+  const hoy = moment().format("L");
 
   const verClic = (index) => {
     let tarea = tasks[index].item;
     let hecho = {
       item: tasks[index].item,
       done: !tasks[index].done,
+      inicio: tasks[index].inicio,
     };
 
     let newarray = tasks.filter((dato) => dato.item !== tarea);
@@ -27,7 +30,11 @@ export default function TaskList({ icon, tasks, setTasks }) {
         {tasks.map((task, index) => (
           <li
             key={index}
-            className="list-group-item"
+            className={
+              moment(task.inicio).isBefore(hoy)
+                ? "list-group-item bg-warning text-dark"
+                : "list-group-item k"
+            }
             onClick={() => verClic(index)}
           >
             {task.done ? iconX : icon}
