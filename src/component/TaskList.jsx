@@ -38,7 +38,7 @@ export default function TaskList({ icon, tasks, setTasks }) {
             onClick={() => verClic(index)}
           >
             {task.done ? iconX : icon}
-            <span className={task.done ? "hecho-true" : ""}>{task.item}</span>
+            <span className={task.done ? "hecho-true" : ""}> {task.item}</span>
           </li>
         ))}
       </ul>

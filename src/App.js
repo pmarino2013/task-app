@@ -71,7 +71,7 @@ function App() {
   return (
     <div className="container">
       <div className="row">
-        <div className="col ">
+        <div className="col col-md-6 offset-md-3">
           <div className="card mt-5">
             <div className="card-body">
               <h1 className="card-title text-center">{icon}Task App</h1>
