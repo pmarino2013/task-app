@@ -29,6 +29,7 @@ function App() {
   useEffect(() => {
     countPendientes();
     localStorage.setItem("tasks", JSON.stringify(tasks));
+    // eslint-disable-next-line
   }, [tasks]);
 
   const handleChange = (e) => {
