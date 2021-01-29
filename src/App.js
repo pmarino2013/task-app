@@ -52,7 +52,7 @@ function App() {
   };
 
   const AddTask = () => {
-    setTasks([...tasks, tarea]);
+    setTasks([tarea, ...tasks]);
   };
 
   const countPendientes = () => {

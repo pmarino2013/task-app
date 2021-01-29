@@ -32,8 +32,8 @@ export default function TaskList({ icon, tasks, setTasks }) {
             key={index}
             className={
               moment(task.inicio).isBefore(hoy)
-                ? "list-group-item bg-warning text-dark"
-                : "list-group-item k"
+                ? "list-group-item bg-warning text-dark pointer"
+                : "list-group-item pointer"
             }
             onClick={() => verClic(index)}
           >
